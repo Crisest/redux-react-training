@@ -6,10 +6,9 @@ const Header = () => (
         <h1>EasyPocket</h1>
         <NavLink to="/" exact={true}  activeClassName="is-active"> Home</NavLink>
         <NavLink to="/account"  activeClassName="is-active"> Account</NavLink>
-        <NavLink to="/details"  activeClassName="is-active"> Expense</NavLink>
+        <NavLink to="/expenses"  activeClassName="is-active"> Expenses</NavLink>
     </div>
     
-
 )
 
 export default Header

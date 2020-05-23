@@ -10,7 +10,9 @@ import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 
 const store = configStore()
-
+store.subscribe(() => {
+    console.log(store.getState());
+})
 const expenseOne = store.dispatch(addExpense({description: 'Computer', amount: 100000}))
 store.dispatch(addExpense({description: 'Water', amount: 400, createdAt: 1000}))
 store.dispatch(editExpense(expenseOne.expense.id, {descriptionL: 'Laptop' ,createdAt: -1000}))

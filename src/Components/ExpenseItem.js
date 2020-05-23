@@ -1,10 +1,11 @@
 import React from 'react';
 import moment from 'moment'
-const ExpenseItem = ({description, amount, createdAt}) => (
+import { Link } from 'react-router-dom';
+const ExpenseItem = ({description, amount, createdAt, id}) => (
     <div>
-        <h3>{description}</h3>
-        <p>${amount / 100}</p>
-        <p>{createdAt}</p>
+        <h3><Link to={`expenses/${id}`}>{description}</Link></h3>
+        <p>${(amount / 100).toFixed(2)}</p>
+        <p>{moment(createdAt).format('MMMM Do YYYY')}</p>
     </div>
 )
 
